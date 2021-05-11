@@ -43,3 +43,9 @@ git log --graph --decorate --abbrev-commit --all --pretty=oneline
 
 # Determine which files are in which state
 git status
+
+# Renaming the Local master Branch to main
+git branch -m master main
+
+# Set tracking information for this branch.
+git branch --set-upstream-to=origin/main main
