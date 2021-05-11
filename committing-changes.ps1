@@ -12,3 +12,15 @@
 # To commit your staged changes use git commit command. You can type your commit message 
 # inline with the commit command by specifying it after a -m flag.
 git commit -m "Your message ..."
+
+# Skipping the Staging Area
+
+# If you want to skip the staging area, Git provides a simple shortcut. Adding the 
+# -a option to the git commit command makes Git automatically stage every file that is 
+# already tracked before doing the commit, letting you skip the git add part.
+
+# Notice how you don’t have to run git add on the new or modified files in this case 
+# before you commit. That’s because the -a flag includes all changed files. This is 
+# convenient, but be careful; sometimes this flag will cause you to include unwanted 
+# changes.
+git commit -a -m "Your message ..."
