@@ -30,8 +30,44 @@ git remote -v
 
 # Adding remote repositories
 
-# The git clone command implicitly adds the origin remote for you. Here’s how to add a new 
-# remote explicitly. To add a new remote Git repository as a shortname you can reference 
-# easily, run git remote add <shortname> <url>
+# The git clone command implicitly adds the origin remote for you. To add a new remote Git 
+# repository as a shortname you can reference easily, run git remote add <shortname> <url>.
 
 git remote add <shortname> <url>
+
+# Fetching and pulling from your remotes
+
+# To get data from your remote projects, you can run 
+
+git fetch <remote>
+
+# The command goes out to that remote project and pulls down all the data from that remote
+# project that you don’t have yet. After you do this, you should have references to all the
+# branches from that remote, which you can merge in or inspect at any time.
+
+# If you clone a repository, the command automatically adds that remote repository under 
+# the name “origin”. So, git fetch origin fetches any new work that has been pushed to that
+# server since you cloned (or last fetched from) it. It’s important to note that the 
+# git fetch command only downloads the data to your local repository — it doesn’t 
+# automatically merge it with any of your work or modify what you’re currently working on. 
+# You have to merge it manually into your work when you’re ready.
+
+# If your current branch is set up to track a remote branch, you can use the git pull command
+# to automatically fetch and then merge that remote branch into your current branch. This may
+# be an easier or more comfortable workflow for you; and by default, the git clone command 
+# automatically sets up your local master branch to track the remote master branch (or 
+# whatever the default branch is called) on the server you cloned from. Running git pull 
+# generally fetches data from the server you originally cloned from and automatically tries
+# to merge it into the code you’re currently working on.
+
+# From git version 2.27 onward, git pull will give a warning if the pull.rebase variable is 
+# not set. Git will keep warning you until you set the variable. 
+
+# If you want the default behavior of git (fast-forward if possible, else create a merge
+# commit): 
+
+git config --global pull.rebase "false"
+
+# If you want to rebase when pulling: 
+
+git config --global pull.rebase "true"
