@@ -87,3 +87,16 @@ git push origin master
 # time and they push upstream and then you push upstream, your push will rightly be 
 # rejected. You’ll have to fetch their work first and incorporate it into yours before 
 # you’ll be allowed to push.
+
+# Inspecting a remote
+
+# If you want to see more information about a particular remote, you can use the 
+# following Git command.
+
+# This command shows which branch is automatically pushed to when you run git push 
+# while on certain branches. It also shows you which remote branches on the server 
+# you don’t yet have, which remote branches you have that have been removed from 
+# the server, and multiple local branches that are able to merge automatically 
+# with their remote-tracking branch when you run git pull.
+
+git remote show <remote>
