@@ -11,3 +11,19 @@
 # knowing how to add remote repositories, remove remotes that are no longer valid, 
 # manage various remote branches and define them as being tracked or not, and more.
 
+# Showing your remotes
+
+# To see which remote servers you have configured, you can run the git remote command. 
+# It lists the shortnames of each remote handle you’ve specified. If you’ve cloned your 
+# repository, you should at least see origin — that is the default name Git gives to 
+# the server you cloned from.
+
+git remote
+
+# You can also specify -v, which shows you the URLs that Git has stored for the shortname 
+# to be used when reading and writing to that remote. If you have more than one remote, 
+# the command lists them all. This means we can pull contributions from any of these users 
+# pretty easily. We may additionally have permission to push to one or more of these,
+# though we can’t tell that here.
+
+git remote -v
