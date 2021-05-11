@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Checking git version
 git --version
 

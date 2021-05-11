@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Removing files from Git
 
 # To remove a file from Git, you have to remove it from your tracked files 

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Tracking new files.
 
 # The git add command takes a path name for either a file or a directory; 

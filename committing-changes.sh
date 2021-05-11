@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Committing your changes
 
 # Remember that anything that is still unstaged — any files you have created or modified
