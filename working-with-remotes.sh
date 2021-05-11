@@ -100,3 +100,20 @@ git push origin master
 # with their remote-tracking branch when you run git pull.
 
 git remote show <remote>
+
+# Renaming and removing remotes
+
+# You can run git remote rename to change a remote’s shortname. It’s worth mentioning
+# that this changes all your remote-tracking branch names, too. What used to be 
+# referenced at old-remote-shortname/master is now at new-remote-shortname/master.
+
+git remote rename <old-remote> <new-remote>
+
+# If you want to remove a remote for some reason — you’ve moved the server or are 
+# no longer using a particular mirror, or perhaps a contributor isn’t contributing 
+# anymore — you can either use git remote remove or git remote rm. Once you delete 
+# the reference to a remote this way, all remote-tracking branches and configuration 
+# settings associated with that remote are also deleted.
+
+git remote remove <remote>
+
