@@ -38,3 +38,6 @@ git merge newfeature
 
 # History
 git log --graph --decorate --abbrev-commit --all --pretty=oneline
+
+# Determine which files are in which state
+git status
