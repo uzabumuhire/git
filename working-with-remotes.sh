@@ -27,3 +27,11 @@ git remote
 # though we can’t tell that here.
 
 git remote -v
+
+# Adding remote repositories
+
+# The git clone command implicitly adds the origin remote for you. Here’s how to add a new 
+# remote explicitly. To add a new remote Git repository as a shortname you can reference 
+# easily, run git remote add <shortname> <url>
+
+git remote add <shortname> <url>
