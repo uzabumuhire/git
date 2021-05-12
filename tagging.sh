@@ -86,3 +86,23 @@ git push <remote> --tags
 # only annotated tags with the following command. 
 
 git push <remote> --follow-tags
+
+# Deleting tags
+
+# To delete a tag on your local repository, you can use the following command. Note
+# that this does not remove the tag from any remote servers. 
+
+git tag -d <tagname>
+
+# There are two common variations for deleting a tag from a remote server. 
+
+# The first way to delete a remote tag is:
+
+git push <remote> :refs/tags/<tagname>
+
+# The way to interpret the above is to read it as the null value before the colon
+# is being pushed to the remote tag name, effectively deleting it.
+
+# The second (and more intuitive) way to delete a remote tag is:
+
+git push <remote> --delete <tagname>
