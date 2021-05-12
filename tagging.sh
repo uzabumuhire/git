@@ -59,3 +59,11 @@ git show vX.Y.Z
 # don’t see the extra tag information. The command just shows the commit.
 
 git tag vX.Y.Z-lightweight
+
+# Tagging later 
+
+# You can also tag commits after you’ve moved past them. Run git log --pretty=oneline
+# to show your commit history. To tag a commit, you specify the commit checksum (or 
+# part of it) at the end of the command.
+
+git tag -a vX.Y.Z 9fceb02
