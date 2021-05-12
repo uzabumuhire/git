@@ -50,3 +50,12 @@ git tag -a vX.Y.Z -m "Message ..."
 # tagged, and the annotation message before showing the commit information.
 
 git show vX.Y.Z
+
+# Lightweight tags
+
+# A lightweight tag is basically the commit checksum stored in a file — no other
+# information is kept. To create a lightweight tag, don’t supply any of the -a,
+# -s, or -m options, just provide a tag name. if you run git show on the tag, you
+# don’t see the extra tag information. The command just shows the commit.
+
+git tag vX.Y.Z-lightweight
