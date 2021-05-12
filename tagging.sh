@@ -19,3 +19,34 @@ git tag
 # or --list is mandatory. You can search for tags that match a particular pattern.
 
 git tag -l "v1.8.5*"
+
+# Creating tags
+
+# Git supports two types of tags: lightweight and annotated.
+
+# A lightweight tag is very much like a branch that doesn’t change — it’s just a 
+# pointer to a specific commit.
+
+# Annotated tags, however, are stored as full objects in the Git database. They’re 
+# checksummed; contain the tagger name, email, and date; have a tagging message; 
+# and can be signed and verified with GNU Privacy Guard (GPG).
+
+# It’s generally recommended that you create annotated tags so you can have all
+# this information; but if you want a temporary tag or for some reason don’t want
+# to keep the other information, lightweight tags are available too.
+
+
+# Annotated tags
+
+# Creating an annotated tag in Git is simple. The easiest way is to specify -a 
+# when you run the tag command. The -m specifies a tagging message, which is 
+# stored with the tag. If you don’t specify a message for an annotated tag, 
+# Git launches your editor so you can type it in.
+
+git tag -a vX.Y.Z -m "Message ..."
+
+# You can see the tag data along with the commit that was tagged by using the 
+# git show command. That shows the tagger information, the date the commit was 
+# tagged, and the annotation message before showing the commit information.
+
+git show vX.Y.Z
