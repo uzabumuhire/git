@@ -46,5 +46,18 @@
 # branch. The only reason nearly every repository has one is that the git init
 # command creates it by default and most people don’t bother to change it.
 
+# Creating branches
 
+# When you create a new branch, Git creates a new pointer for you to move around.
+# To create a new branch called, use the git branch command. This creates a new
+# pointer to the same commit you’re currently on. The git branch command only
+# created a new branch — it didn’t switch to that branch.
 
+git branch <branchname>
+
+# To know what branch you’re currently on, Git keeps a special pointer called HEAD.
+# In Git, this is a pointer to the local branch you’re currently on. You can easily
+# see this by running a simple git log command  with --decorate option that shows
+# you where the branch pointers are pointing.
+
+git log --oneline --decorate --graph --all
