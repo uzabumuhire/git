@@ -106,3 +106,21 @@ git push <remote> :refs/tags/<tagname>
 # The second (and more intuitive) way to delete a remote tag is:
 
 git push <remote> --delete <tagname>
+
+# Checking out tags
+
+# If you want to view the versions of files a tag is pointing to, you can do a
+# git checkout of that tag, although this puts your repository in “detached HEAD”
+# state, which has some ill side effects.
+
+git checkout <tagname>
+
+# In “detached HEAD” state, if you make changes and then create a commit, the tag
+# will stay the same, but your new commit won’t belong to any branch and will be
+# unreachable, except by the exact commit hash. Thus, if you need to make changes
+# — say you’re fixing a bug on an older version, for instance — you will generally
+# want to create a branch. If you do this and make a commit, your branch will be
+# slightly different than your tag since it will move forward with your new changes,
+# so do be careful.
+
+git checkout -b <branchname> <tagname>
