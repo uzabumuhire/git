@@ -49,7 +49,7 @@ git tag -a vX.Y.Z -m "Message ..."
 # git show command. That shows the tagger information, the date the commit was 
 # tagged, and the annotation message before showing the commit information.
 
-git show vX.Y.Z
+git show <tagname>
 
 # Lightweight tags
 
@@ -58,7 +58,7 @@ git show vX.Y.Z
 # -s, or -m options, just provide a tag name. if you run git show on the tag, you
 # don’t see the extra tag information. The command just shows the commit.
 
-git tag vX.Y.Z-lightweight
+git tag <tagname>
 
 # Tagging later 
 
@@ -66,4 +66,23 @@ git tag vX.Y.Z-lightweight
 # to show your commit history. To tag a commit, you specify the commit checksum (or 
 # part of it) at the end of the command.
 
-git tag -a vX.Y.Z 9fceb02
+git tag -a <tagname> <commit-hash>
+
+# Sharing tags
+
+# By default, the git push command doesn’t transfer tags to remote servers. You will
+# have to explicitly push tags to a shared server after you have created them.
+
+git push <remote> <tagname>
+
+# If you have a lot of tags that you want to push up at once, you can also use the
+# --tags option to the git push command. This will transfer all of your tags to the
+# remote server that are not already there.
+
+git push <remote> --tags
+
+# git push <remote> --tags will push both lightweight and annotated tags. There is
+# currently no option to push only lightweight tags, but you can push to the remote
+# only annotated tags with the following command. 
+
+git push <remote> --follow-tags
