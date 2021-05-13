@@ -58,6 +58,54 @@ git branch <branchname>
 # To know what branch you’re currently on, Git keeps a special pointer called HEAD.
 # In Git, this is a pointer to the local branch you’re currently on. You can easily
 # see this by running a simple git log command  with --decorate option that shows
-# you where the branch pointers are pointing.
+# you where the branch pointers are pointing. git log doesn’t show all the branches
+# all the time. git log will only show commit history below the branch you’ve
+# checked out. To show all of the branches, add --all to your git log command.
 
 git log --oneline --decorate --graph --all
+
+# Switching to a new branch
+
+# To switch to an existing branch, you run the git checkout command. This moves HEAD
+# to point to the branch you are switching to. Switching branches changes files in
+# your working directory.  If you switch to an older branch, your working directory
+# will be reverted to look like it did the last time you committed on that branch.
+# If Git cannot do it cleanly, it will not let you switch at all.
+
+git checkout <branchname>
+
+# Your project history diverges when you create and switch to a branch, do some work
+# on it, and then switche back to your main branch and do other work. Both of those
+# changes are isolated in separate branches: you can switch back and forth between
+# the branches and merge them together when you’re ready. You can also see this easily
+# with the git log command. If you run git log --oneline --decorate --graph --all
+# it will print out the history of your commits, showing where your branch pointers
+# are and how your history has diverged.
+
+# Because a branch in Git is actually a simple file that contains the 40 character
+# SHA-1 checksum of the commit it points to, branches are cheap to create and destroy.
+# Creating a new branch is as quick and simple as writing 41 bytes to a file 
+# (40 characters and a newline). The Git branching process is always instantaneous.
+# Because we’re recording the parents when we commit, finding a proper merge base for
+# merging is automatically done for us and is generally very easy to do. These features
+# help encourage developers to create and use branches often.
+
+# It’s typical to create a new branch and want to switch to that new branch at the same
+# time — this can be done in one operation
+
+git checkout -b <newbranchname>
+
+# From Git version 2.23 onwards you can use git switch instead of git checkout to:
+
+# - Switch to an existing branch
+
+git switch <branchname>
+
+# - Create a new branch and switch to it. The -c flag stands for create, you can
+#   also use the full flag: --create.
+
+git switch -c <newbranchname>
+
+# - Return to your previously checked out branch:
+
+git switch -
