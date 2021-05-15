@@ -22,3 +22,10 @@
 # This makes Git more like a mini filesystem with some incredibly powerful tools
 # built on top of it, rather than simply a VCS.
 
+# Git local operations
+
+# Most operations in Git need only local files and resources to operate — generally
+# no information is needed from another computer on your network. Because you have
+# the entire history of the project right there on your local disk, most operations
+# seem almost instantaneous. This also means that there is very little you can’t do
+# if you’re offline or off VPN.
