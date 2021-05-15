@@ -37,3 +37,11 @@ git config --list --show-origin
 
 git config --global user.name "Jean Jacques Uzabumuhire"
 git config --global user.email "uzabumuhire@gmail.com"
+
+# Setting up your editor
+
+# Configure the default text editor that will be used when Git needs you to type
+# in a message. If not configured, Git uses your system’s default editor. More 
+# information, can be found at https://git-scm.com/book/en/v2/ch00/ch_core_editor.
+
+git config --global core.editor "code --wait"
