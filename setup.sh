@@ -45,3 +45,11 @@ git config --global user.email "uzabumuhire@gmail.com"
 # information, can be found at https://git-scm.com/book/en/v2/ch00/ch_core_editor.
 
 git config --global core.editor "code --wait"
+
+# Setting up your default branch name
+
+# By default Git will create a branch called master when you create a new repository
+# with git init. From Git version 2.28 onwards, you can set a different name for the
+# initial branch. To set main as the default branch name do:
+
+git config --global init.defaultBranch main
