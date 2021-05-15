@@ -53,3 +53,21 @@ git config --global core.editor "code --wait"
 # initial branch. To set main as the default branch name do:
 
 git config --global init.defaultBranch main
+
+# Checking your settings
+
+# If you want to check your configuration settings, you can use the git config --list
+# command to list all the settings Git can find at that point.
+
+git config --list
+
+# Since Git might read the same configuration variable value from more than one file,
+# it’s possible that you have an unexpected value for one of these values and you don’t
+# know why. In cases like that, you can query Git as to the origin for that value, and
+# it will tell you which configuration file had the final say in setting that value.
+
+git config --list --show-origin
+
+# You can also check what Git thinks a specific key’s value is.
+git config user.name
+git config --show-origin user.name
