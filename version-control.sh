@@ -43,3 +43,13 @@
 # calculated based on the contents of a file or directory structure in Git. Git
 # stores everything in its database not by file name but by the hash value of
 # its contents.
+
+# Git data recovery
+
+# When you do actions in Git, nearly all of them only add data to the Git database.
+# It is hard to get the system to do anything that is not undoable or to make it
+# erase data in any way. You can lose or mess up changes you haven’t committed yet,
+# but after you commit a snapshot into Git, it is very difficult to lose, especially
+# if you regularly push your database to another repository. This makes using Git a
+# joy because we know we can experiment without the danger of severely screwing
+# things up.
